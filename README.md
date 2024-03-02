@@ -1,4 +1,4 @@
-#This is a small trading strategy simulator.#
+<h1>This is a small trading strategy simulator.</h1>
 The analysis is based depending on simple variables of your strategy such as: Winrate, Number of Trades, Risk, multiplier at the time of winning.
 
 
