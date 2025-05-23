@@ -1,5 +1,6 @@
 function Calc(config) {
   const history = {
+    trades: [],
     start_capital: config.capital,
     end_capital: config.capital,
     risk: config.risk + "%",
@@ -9,7 +10,6 @@ function Calc(config) {
     winrate: 0,
     win: 0,
     loss: 0,
-    trades: [],
   };
 
   const r = config.capital * (config.risk / 100);
@@ -72,12 +72,15 @@ function Calc(config) {
   return history;
 }
 
-console.log(
-  Calc({
-    trades: 10,
-    capital: 100,
-    risk: 1, // 1-100%
-    winrate: 60, // 1-100%
-    multiplier: 3, // This multiplier 1 - your number
-  })
-);
+const {
+  //trades,
+  ...final
+} = Calc({
+  trades: 100,
+  capital: 100,
+  risk: 1, // 1-100%
+  winrate: 30, // 1-100%
+  multiplier: 5, // This multiplier 1 - your number
+});
+
+console.log(final);
